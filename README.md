@@ -40,4 +40,8 @@ cd straw-hat-crew-app
 npm install
 
 # Start the dev server
-npm start
+npm start 
+
+#login credentials
+Username: luffy
+Password: gomugomuno
