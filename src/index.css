@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.crew-grid{
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.crew-card {
+  border: 2px solid #ccc;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 200px;
+  color: black;
+}
+
+.crew-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #eee
+}
+
+.login-page {
+  
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color:black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form-container {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 2rem;
+  border-radius: 1rem;
+  color: whitesmoke;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form-container h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.login-form-container input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.login-form-container button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.login-form-container button:hover {
+  background-color: #a40000;
+}
+
+
+.dashboard-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  color: whitesmoke;
+}
+
+.dashboard-container {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding:2rem;
+  border-radius: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  color: whitesmoke;
+}
+
+.dashboard-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-page button {
+  background-color: crimson;
+  color: whitesmoke;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  width:100%;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-page button:hover {
+  background-color: #a40000;
+}
+
