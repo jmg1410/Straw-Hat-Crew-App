@@ -11,11 +11,7 @@ Welcome aboard! This is a React + Redux app inspired by *One Piece*, where users
 - ✅ Custom loading screen while the Thousand Sunny arrives
 - ✅ Logout button that clears state and storage
 
-## 🖼️ Screenshots
 
-> _(Add a couple images if you can — login screen, dashboard, etc.)_
-
----
 
 ## 🛠️ Tech Stack
 
