@@ -1,4 +1,4 @@
-# 🏴‍☠️ Straw Hat Crew App (Sprint Challenge 11)
+# 🏴‍☠️ Straw Hat Crew App 
 
 Welcome aboard! This is a React + Redux app inspired by *One Piece*, where users can log in and explore information about Luffy's legendary crew, the Straw Hat Pirates.
 
