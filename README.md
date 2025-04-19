@@ -27,7 +27,7 @@ Welcome aboard! This is a React + Redux app inspired by *One Piece*, where users
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/straw-hat-crew-app.git
+git clone https://github.com/jmg1410/straw-hat-crew-app.git
 
 # Navigate into the project
 cd straw-hat-crew-app
