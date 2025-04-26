@@ -14,25 +14,23 @@ code {
 
 .crew-grid{
   display: flex;
-  gap: 2rem;
+  gap: 6rem;
   flex-wrap: wrap;
   padding: 2rem;
 }
 
 .crew-card {
-  border: 2px solid #ccc;
-  padding: 1rem;
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow:2px 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  perspective: 1000px;
   width: 200px;
-  color: black;
+  height: 320px;
+  position: relative;
+  cursor: pointer;
 }
+
 
 .crew-card img {
   width: 100%;
-  height: 200px;
+  height: 150px;
   object-fit: cover;
   object-position: top;
   border-radius: 0.5rem;
@@ -138,3 +136,41 @@ code {
   background-color: #a40000;
 }
 
+
+
+.crew-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  transform-style: preserve-3d;
+}
+
+.crew-card.flipped .crew-card-inner {
+  transform: rotateY(180deg);
+}
+
+.crew-card-front,
+.crew-card-back {
+  color: #111;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.9); /* moved background here */
+  border: 2px solid #ccc; /* moved border here */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.crew-card-back {
+  transform: rotateY(180deg);
+  background-color: #f3f3f3;
+  justify-content: center;
+}

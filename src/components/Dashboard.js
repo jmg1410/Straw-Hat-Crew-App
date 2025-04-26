@@ -5,8 +5,31 @@ import { logout } from "../redux/authSlice";
 import { useNavigate } from "react-router-dom";
 import jolly from '../Assets/jolly.jpg';
 
-// The thousand sunny will port here with all the crew members sailing from the mock API
 
+// The thousand sunny will port here with all the crew members sailing from the mock API
+const CrewCard = ({member}) => {
+    const [isFlipped, setIsFlipped] = useState(false);
+    const handleCardClick = () => {
+        setIsFlipped(!isFlipped)
+    };
+
+return (
+    <div className={`crew-card ${isFlipped ? "flipped" : ""}`} onClick={handleCardClick}>
+    <div className="crew-card-inner">
+      <div className="crew-card-front">
+        <img src={member.img} alt={member.name} />
+        <h3>{member.name}</h3>
+        <p><strong>Role:</strong> {member.role}</p>
+        <p><strong>Bounty:</strong> {member.bounty}</p>
+      </div>
+      <div className="crew-card-back">
+        <h3>Origin</h3>
+        <p>{member.backstory || "No backstory yet..."}</p>
+      </div>
+    </div>
+  </div>
+)
+}
 
 const Dashboard = () => {
     const [crew, setCrew] = useState([]);
@@ -48,30 +71,30 @@ const Dashboard = () => {
     return (
         <div className="dashboard-page"
         style={{
-            backgroundImage: `url(${jolly})`,
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundColor: 'black',
-            minHeight: '100vh',
-            padding: '2rem'
-          }}
-        >
-            <h1>Welcome Aboard the Thousand Sunny! 🏴‍☠️</h1>
-            <p>This is where you'll learn all about the future King of the pirates's crew!</p>
-            <button onClick={handleLogout}>Logout</button>
-            <div className="crew-grid">
-                {crew.map(member => (
-                    <div key={member.id} className="crew-card">
-                        <img src={member.img} alt={member.name} width='150' />
-                        <h3>{member.name}</h3>
-                        <p><strong>Role:</strong>{member.role}</p>
-                         <p><strong>Bounty:</strong>{member.bounty}</p>
-                 </div>
-                ))}
-            </div>
-            
+          backgroundImage: `url(${jolly})`,
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundColor: 'black',
+          minHeight: '100vh',
+          padding: '2rem'
+        }}
+      >
+        <h1>Welcome Aboard the Thousand Sunny! 🏴‍☠️</h1>
+        <p>This is where you'll learn all about the future King of the Pirates's crew!</p>
+        <button onClick={handleLogout}>Logout</button>
+  
+        {/* Crew grid */}
+        <div className="crew-grid">
+          {Array.isArray(crew) && crew.length > 0 ? (
+            crew.map(member => (
+              <CrewCard key={member.id} member={member} />
+            ))
+          ) : (
+            <p style={{ color: 'gold' }}>No crew members found 🏴‍☠️</p>
+          )}
         </div>
+      </div>
     )
 }
 

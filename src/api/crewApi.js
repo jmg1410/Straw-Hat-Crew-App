@@ -1,4 +1,16 @@
-export const getStrawHatCrew = () => {
+export const getStrawHatCrew = async () => {
+    try {
+     const response = await fetch('http://localhost:8080/strawhats');
+     console.log('response -->', response)
+     const data = await response.json();
+     return data
+    } catch (err) {
+     console.log('Error fetching pirates', err);
+    }
+}
+
+
+/* export const getStrawHatCrew = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve([
@@ -40,7 +52,7 @@ export const getStrawHatCrew = () => {
                 {
                     id: 6,
                     name: 'Nico Robin',
-                    role:"Archaeologis",
+                    role:"Archaeologist",
                     bounty: '930,000,000 Berries',
                     img: '/robin.webp' 
                 },
@@ -76,3 +88,4 @@ export const getStrawHatCrew = () => {
         }, 1000)
     })
 }
+*/
