@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import jolly from '../Assets/jolly.jpg';
 
 
-// The thousand sunny will port here with all the crew members sailing from the mock API
+// The thousand sunny will port here with all the crew members sailing from the API
 const CrewCard = ({member}) => {
     const [isFlipped, setIsFlipped] = useState(false);
     const handleCardClick = () => {

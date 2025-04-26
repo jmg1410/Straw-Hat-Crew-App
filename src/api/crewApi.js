@@ -9,7 +9,7 @@ export const getStrawHatCrew = async () => {
     }
 }
 
-
+//mock API
 /* export const getStrawHatCrew = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
