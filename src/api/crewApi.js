@@ -1,6 +1,6 @@
 export const getStrawHatCrew = async () => {
     try {
-     const response = await fetch('http://localhost:8080/strawhats');
+     const response = await fetch('http://localhost:8080/pirates');
      console.log('response -->', response)
      const data = await response.json();
      return data

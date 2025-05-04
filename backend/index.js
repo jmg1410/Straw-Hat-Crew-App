@@ -15,9 +15,9 @@ server.get('/', (req, res) => {
     res.send('Welcome to the Grand Line! ☠️🌊')
 })
 
-server.get('/strawhats', async (req, res) => {
+server.get('/pirates', async (req, res) => {
     try{
-     const crew = await db('straw_hats');
+     const crew = await db('pirates');
      res.status(200).json(crew)
     } catch (err) {
      res.status(500).json({
